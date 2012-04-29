@@ -1,0 +1,14 @@
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\GrowlPlugin.dll
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\GrowlPlugin.pdb
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\Growl.Connector.dll
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\Growl.CoreLibrary.dll
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\zVirtualScenesAPI.dll
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\zVirtualScenesCommon.dll
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\zVirtualScenesAPI.pdb
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\bin\Debug\zVirtualScenesCommon.pdb
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\obj\Debug\GrowlPlugin.Properties.Resources.resources
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\obj\Debug\GenerateResource.read.1.tlog
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\obj\Debug\GenerateResource.write.1.tlog
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\obj\Debug\GrowlPlugin.dll
+I:\var\zvirtualscenes\Plugins\GrowlPlugin\obj\Debug\GrowlPlugin.pdb

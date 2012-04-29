@@ -1,0 +1,5 @@
+I:\var\zvirtualscenes\output\plugins\HttpAPI.dll
+I:\var\zvirtualscenes\output\plugins\HttpAPI.pdb
+I:\var\zvirtualscenes\Plugins\HttpAPI\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\HttpAPI\obj\Debug\HttpAPI.dll
+I:\var\zvirtualscenes\Plugins\HttpAPI\obj\Debug\HttpAPI.pdb

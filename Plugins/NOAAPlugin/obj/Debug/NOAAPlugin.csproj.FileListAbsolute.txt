@@ -1,0 +1,5 @@
+I:\var\zvirtualscenes\output\plugins\NOAAPlugin.dll
+I:\var\zvirtualscenes\output\plugins\NOAAPlugin.pdb
+I:\var\zvirtualscenes\Plugins\NOAAPlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\NOAAPlugin\obj\Debug\NOAAPlugin.dll
+I:\var\zvirtualscenes\Plugins\NOAAPlugin\obj\Debug\NOAAPlugin.pdb

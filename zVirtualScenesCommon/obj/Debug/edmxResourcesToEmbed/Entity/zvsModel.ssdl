@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="zvsModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="zvsModelStoreContainer">
+    <EntitySet Name="builtin_command_options" EntityType="zvsModel.Store.builtin_command_options" store:Type="Tables" />
+    <EntitySet Name="builtin_command_que" EntityType="zvsModel.Store.builtin_command_que" store:Type="Tables" />
+    <EntitySet Name="builtin_commands" EntityType="zvsModel.Store.builtin_commands" store:Type="Tables" />
+    <EntitySet Name="db_info" EntityType="zvsModel.Store.db_info" store:Type="Tables" />
+    <EntitySet Name="device_command_options" EntityType="zvsModel.Store.device_command_options" store:Type="Tables" />
+    <EntitySet Name="device_command_que" EntityType="zvsModel.Store.device_command_que" store:Type="Tables" />
+    <EntitySet Name="device_commands" EntityType="zvsModel.Store.device_commands" store:Type="Tables" />
+    <EntitySet Name="device_property_options" EntityType="zvsModel.Store.device_property_options" store:Type="Tables" />
+    <EntitySet Name="device_property_values" EntityType="zvsModel.Store.device_property_values" store:Type="Tables" />
+    <EntitySet Name="device_propertys" EntityType="zvsModel.Store.device_propertys" store:Type="Tables" />
+    <EntitySet Name="device_type_command_options" EntityType="zvsModel.Store.device_type_command_options" store:Type="Tables" />
+    <EntitySet Name="device_type_command_que" EntityType="zvsModel.Store.device_type_command_que" store:Type="Tables" />
+    <EntitySet Name="device_type_commands" EntityType="zvsModel.Store.device_type_commands" store:Type="Tables" />
+    <EntitySet Name="device_types" EntityType="zvsModel.Store.device_types" store:Type="Tables" />
+    <EntitySet Name="device_value_triggers" EntityType="zvsModel.Store.device_value_triggers" store:Type="Tables" />
+    <EntitySet Name="device_values" EntityType="zvsModel.Store.device_values" store:Type="Tables" />
+    <EntitySet Name="devices" EntityType="zvsModel.Store.devices" store:Type="Tables" />
+    <EntitySet Name="group_devices" EntityType="zvsModel.Store.group_devices" store:Type="Tables" />
+    <EntitySet Name="groups" EntityType="zvsModel.Store.groups" store:Type="Tables" />
+    <EntitySet Name="plugin_setting_options" EntityType="zvsModel.Store.plugin_setting_options" store:Type="Tables" />
+    <EntitySet Name="plugin_settings" EntityType="zvsModel.Store.plugin_settings" store:Type="Tables" />
+    <EntitySet Name="plugins" EntityType="zvsModel.Store.plugins" store:Type="Tables" />
+    <EntitySet Name="program_options" EntityType="zvsModel.Store.program_options" store:Type="Tables" />
+    <EntitySet Name="scene_commands" EntityType="zvsModel.Store.scene_commands" store:Type="Tables" />
+    <EntitySet Name="scene_property" EntityType="zvsModel.Store.scene_property" store:Type="Tables" />
+    <EntitySet Name="scene_property_option" EntityType="zvsModel.Store.scene_property_option" store:Type="Tables" />
+    <EntitySet Name="scene_property_value" EntityType="zvsModel.Store.scene_property_value" store:Type="Tables" />
+    <EntitySet Name="scenes" EntityType="zvsModel.Store.scenes" store:Type="Tables" />
+    <EntitySet Name="scheduled_tasks" EntityType="zvsModel.Store.scheduled_tasks" store:Type="Tables" />
+    <AssociationSet Name="FK_builtin_command_options_0" Association="zvsModel.Store.FK_builtin_command_options_0">
+      <End Role="builtin_commands" EntitySet="builtin_commands" />
+      <End Role="builtin_command_options" EntitySet="builtin_command_options" />
+    </AssociationSet>
+    <AssociationSet Name="FK_builtin_command_que_0" Association="zvsModel.Store.FK_builtin_command_que_0">
+      <End Role="builtin_commands" EntitySet="builtin_commands" />
+      <End Role="builtin_command_que" EntitySet="builtin_command_que" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_command_options_0" Association="zvsModel.Store.FK_device_command_options_0">
+      <End Role="device_commands" EntitySet="device_commands" />
+      <End Role="device_command_options" EntitySet="device_command_options" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_command_que_0" Association="zvsModel.Store.FK_device_command_que_0">
+      <End Role="device_commands" EntitySet="device_commands" />
+      <End Role="device_command_que" EntitySet="device_command_que" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_command_que_1" Association="zvsModel.Store.FK_device_command_que_1">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="device_command_que" EntitySet="device_command_que" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_commands_0" Association="zvsModel.Store.FK_device_commands_0">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="device_commands" EntitySet="device_commands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_property_options_0" Association="zvsModel.Store.FK_device_property_options_0">
+      <End Role="device_propertys" EntitySet="device_propertys" />
+      <End Role="device_property_options" EntitySet="device_property_options" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_property_values_0" Association="zvsModel.Store.FK_device_property_values_0">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="device_property_values" EntitySet="device_property_values" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_property_values_1" Association="zvsModel.Store.FK_device_property_values_1">
+      <End Role="device_propertys" EntitySet="device_propertys" />
+      <End Role="device_property_values" EntitySet="device_property_values" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_type_command_options_0" Association="zvsModel.Store.FK_device_type_command_options_0">
+      <End Role="device_type_commands" EntitySet="device_type_commands" />
+      <End Role="device_type_command_options" EntitySet="device_type_command_options" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_type_command_que_0" Association="zvsModel.Store.FK_device_type_command_que_0">
+      <End Role="device_type_commands" EntitySet="device_type_commands" />
+      <End Role="device_type_command_que" EntitySet="device_type_command_que" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_type_command_que_1" Association="zvsModel.Store.FK_device_type_command_que_1">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="device_type_command_que" EntitySet="device_type_command_que" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_type_commands_0" Association="zvsModel.Store.FK_device_type_commands_0">
+      <End Role="device_types" EntitySet="device_types" />
+      <End Role="device_type_commands" EntitySet="device_type_commands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_types_0" Association="zvsModel.Store.FK_device_types_0">
+      <End Role="plugins" EntitySet="plugins" />
+      <End Role="device_types" EntitySet="device_types" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_value_triggers_0" Association="zvsModel.Store.FK_device_value_triggers_0">
+      <End Role="scenes" EntitySet="scenes" />
+      <End Role="device_value_triggers" EntitySet="device_value_triggers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_value_triggers_1" Association="zvsModel.Store.FK_device_value_triggers_1">
+      <End Role="device_values" EntitySet="device_values" />
+      <End Role="device_value_triggers" EntitySet="device_value_triggers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_values_0" Association="zvsModel.Store.FK_device_values_0">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="device_values" EntitySet="device_values" />
+    </AssociationSet>
+    <AssociationSet Name="FK_devices_0" Association="zvsModel.Store.FK_devices_0">
+      <End Role="device_types" EntitySet="device_types" />
+      <End Role="devices" EntitySet="devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_group_devices_0" Association="zvsModel.Store.FK_group_devices_0">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="group_devices" EntitySet="group_devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_group_devices_1" Association="zvsModel.Store.FK_group_devices_1">
+      <End Role="groups" EntitySet="groups" />
+      <End Role="group_devices" EntitySet="group_devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_plugin_setting_options_0" Association="zvsModel.Store.FK_plugin_setting_options_0">
+      <End Role="plugin_settings" EntitySet="plugin_settings" />
+      <End Role="plugin_setting_options" EntitySet="plugin_setting_options" />
+    </AssociationSet>
+    <AssociationSet Name="FK_plugin_settings_0" Association="zvsModel.Store.FK_plugin_settings_0">
+      <End Role="plugins" EntitySet="plugins" />
+      <End Role="plugin_settings" EntitySet="plugin_settings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_scene_commands_0" Association="zvsModel.Store.FK_scene_commands_0">
+      <End Role="devices" EntitySet="devices" />
+      <End Role="scene_commands" EntitySet="scene_commands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_scene_commands_1" Association="zvsModel.Store.FK_scene_commands_1">
+      <End Role="scenes" EntitySet="scenes" />
+      <End Role="scene_commands" EntitySet="scene_commands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_scene_property_option_0" Association="zvsModel.Store.FK_scene_property_option_0">
+      <End Role="scene_property" EntitySet="scene_property" />
+      <End Role="scene_property_option" EntitySet="scene_property_option" />
+    </AssociationSet>
+    <AssociationSet Name="FK_scene_property_value_0" Association="zvsModel.Store.FK_scene_property_value_0">
+      <End Role="scenes" EntitySet="scenes" />
+      <End Role="scene_property_value" EntitySet="scene_property_value" />
+    </AssociationSet>
+    <AssociationSet Name="FK_scene_property_value_1" Association="zvsModel.Store.FK_scene_property_value_1">
+      <End Role="scene_property" EntitySet="scene_property" />
+      <End Role="scene_property_value" EntitySet="scene_property_value" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="builtin_command_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="builtin_command_id" Type="integer" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="builtin_command_que">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="arg" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="builtin_command_id" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="builtin_commands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="arg_data_type" Type="int" Nullable="false" />
+    <Property Name="custom_data1" Type="nvarchar" MaxLength="255" />
+    <Property Name="custom_data2" Type="nvarchar" MaxLength="255" />
+    <Property Name="description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="show_on_dynamic_obj_list" Type="bit" Nullable="false" />
+    <Property Name="help" Type="nvarchar" MaxLength="255" />
+    <Property Name="sort_order" Type="integer" />
+  </EntityType>
+  <EntityType Name="db_info">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="info_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="info_value" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="device_command_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_command_id" Type="integer" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_command_que">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_id" Type="integer" Nullable="false" />
+    <Property Name="device_command_id" Type="integer" Nullable="false" />
+    <Property Name="arg" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_commands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_id" Type="integer" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="arg_data_type" Type="integer" Nullable="false" />
+    <Property Name="custom_data1" Type="nvarchar" MaxLength="255" />
+    <Property Name="custom_data2" Type="nvarchar" MaxLength="255" />
+    <Property Name="description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="sort_order" Type="integer" />
+    <Property Name="help" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_property_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_property_id" Type="integer" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_property_values">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_id" Type="integer" Nullable="false" />
+    <Property Name="device_property_id" Type="integer" Nullable="false" />
+    <Property Name="value" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_propertys">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="default_value" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="value_data_type" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="device_type_command_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_type_command_id" Type="integer" Nullable="false" />
+    <Property Name="option" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_type_command_que">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_type_command_id" Type="integer" Nullable="false" />
+    <Property Name="device_id" Type="integer" Nullable="false" />
+    <Property Name="arg" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_type_commands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_type_id" Type="integer" Nullable="false" />
+    <Property Name="description" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="arg_data_type" Type="integer" Nullable="false" />
+    <Property Name="custom_data1" Type="nvarchar" MaxLength="255" />
+    <Property Name="custom_data2" Type="nvarchar" MaxLength="255" />
+    <Property Name="help" Type="nvarchar" MaxLength="1024" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="sort_order" Type="integer" />
+  </EntityType>
+  <EntityType Name="device_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="plugin_id" Type="integer" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="show_in_list" Type="bit" Nullable="false" />
+    <Property Name="friendly_name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="device_value_triggers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_value_id" Type="integer" Nullable="false" />
+    <Property Name="trigger_operator" Type="int" />
+    <Property Name="trigger_value" Type="nvarchar" MaxLength="255" />
+    <Property Name="enabled" Type="bit" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="scene_id" Type="integer" />
+    <Property Name="trigger_type" Type="integer" Nullable="false" />
+    <Property Name="trigger_script" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="device_values">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_id" Type="integer" Nullable="false" />
+    <Property Name="value_id" Type="nvarchar" MaxLength="255" />
+    <Property Name="label_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="genre" Type="nvarchar" MaxLength="255" />
+    <Property Name="index" Type="nvarchar" MaxLength="255" />
+    <Property Name="type" Type="nvarchar" MaxLength="255" />
+    <Property Name="commandClassId" Type="nvarchar" MaxLength="255" />
+    <Property Name="value" Type="nvarchar" MaxLength="255" />
+    <Property Name="read_only" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="devices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="device_type_id" Type="integer" Nullable="false" />
+    <Property Name="node_id" Type="integer" Nullable="false" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="last_heard_from" Type="datetime" />
+  </EntityType>
+  <EntityType Name="group_devices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="device_id" Type="integer" Nullable="false" />
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="group_id" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="groups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="plugin_setting_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="plugin_settings_id" Type="integer" Nullable="false" />
+    <Property Name="option" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="plugin_settings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="plugin_id" Type="integer" Nullable="false" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="value" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="value_data_type" Type="integer" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="255" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="plugins">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="enabled" Type="bit" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="program_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" />
+    <Property Name="value" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="scene_commands">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="scene_id" Type="integer" Nullable="false" />
+    <Property Name="device_id" Type="integer" />
+    <Property Name="command_type_id" Type="integer" Nullable="false" />
+    <Property Name="command_id" Type="integer" Nullable="false" />
+    <Property Name="arg" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="sort_order" Type="integer" />
+  </EntityType>
+  <EntityType Name="scene_property">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="defualt_value" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="value_data_type" Type="integer" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="scene_property_option">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="scene_property_id" Type="integer" Nullable="false" />
+    <Property Name="option" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="scene_property_value">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="scene_id" Type="integer" Nullable="false" />
+    <Property Name="scene_property_id" Type="integer" Nullable="false" />
+    <Property Name="value" Type="nvarchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="scenes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="friendly_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="sort_order" Type="integer" />
+    <Property Name="is_running" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="scheduled_tasks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="friendly_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Enabled" Type="bit" Nullable="false" />
+    <Property Name="Scene_id" Type="integer" Nullable="false" />
+    <Property Name="Frequency" Type="integer" />
+    <Property Name="RecurMonday" Type="bit" />
+    <Property Name="RecurTuesday" Type="bit" />
+    <Property Name="RecurWednesday" Type="bit" />
+    <Property Name="RecurThursday" Type="bit" />
+    <Property Name="RecurFriday" Type="bit" />
+    <Property Name="RecurSaturday" Type="bit" />
+    <Property Name="RecurSunday" Type="bit" />
+    <Property Name="RecurDays" Type="integer" />
+    <Property Name="RecurWeeks" Type="integer" />
+    <Property Name="RecurMonth" Type="integer" />
+    <Property Name="RecurDayofMonth" Type="integer" />
+    <Property Name="RecurSeconds" Type="integer" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="sort_order" Type="integer" />
+    <Property Name="RecurEven" Type="bit" />
+    <Property Name="RecurDay01" Type="bit" />
+    <Property Name="RecurDay02" Type="bit" />
+    <Property Name="RecurDay03" Type="bit" />
+    <Property Name="RecurDay04" Type="bit" />
+    <Property Name="RecurDay05" Type="bit" />
+    <Property Name="RecurDay06" Type="bit" />
+    <Property Name="RecurDay07" Type="bit" />
+    <Property Name="RecurDay08" Type="bit" />
+    <Property Name="RecurDay09" Type="bit" />
+    <Property Name="RecurDay10" Type="bit" />
+    <Property Name="RecurDay11" Type="bit" />
+    <Property Name="RecurDay12" Type="bit" />
+    <Property Name="RecurDay13" Type="bit" />
+    <Property Name="RecurDay14" Type="bit" />
+    <Property Name="RecurDay15" Type="bit" />
+    <Property Name="RecurDay16" Type="bit" />
+    <Property Name="RecurDay17" Type="bit" />
+    <Property Name="RecurDay18" Type="bit" />
+    <Property Name="RecurDay19" Type="bit" />
+    <Property Name="RecurDay20" Type="bit" />
+    <Property Name="RecurDay21" Type="bit" />
+    <Property Name="RecurDay22" Type="bit" />
+    <Property Name="RecurDay23" Type="bit" />
+    <Property Name="RecurDay24" Type="bit" />
+    <Property Name="RecurDay25" Type="bit" />
+    <Property Name="RecurDay26" Type="bit" />
+    <Property Name="RecurDay27" Type="bit" />
+    <Property Name="RecurDay28" Type="bit" />
+    <Property Name="RecurDay29" Type="bit" />
+    <Property Name="RecurDay30" Type="bit" />
+    <Property Name="RecurDay31" Type="bit" />
+  </EntityType>
+  <Association Name="FK_builtin_command_options_0">
+    <End Role="builtin_commands" Type="zvsModel.Store.builtin_commands" Multiplicity="1" />
+    <End Role="builtin_command_options" Type="zvsModel.Store.builtin_command_options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builtin_commands">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="builtin_command_options">
+        <PropertyRef Name="builtin_command_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_builtin_command_que_0">
+    <End Role="builtin_commands" Type="zvsModel.Store.builtin_commands" Multiplicity="1" />
+    <End Role="builtin_command_que" Type="zvsModel.Store.builtin_command_que" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="builtin_commands">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="builtin_command_que">
+        <PropertyRef Name="builtin_command_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_command_options_0">
+    <End Role="device_commands" Type="zvsModel.Store.device_commands" Multiplicity="1" />
+    <End Role="device_command_options" Type="zvsModel.Store.device_command_options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_commands">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_command_options">
+        <PropertyRef Name="device_command_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_command_que_0">
+    <End Role="device_commands" Type="zvsModel.Store.device_commands" Multiplicity="1" />
+    <End Role="device_command_que" Type="zvsModel.Store.device_command_que" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_commands">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_command_que">
+        <PropertyRef Name="device_command_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_command_que_1">
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="1" />
+    <End Role="device_command_que" Type="zvsModel.Store.device_command_que" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_command_que">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_commands_0">
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="1" />
+    <End Role="device_commands" Type="zvsModel.Store.device_commands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_commands">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_property_options_0">
+    <End Role="device_propertys" Type="zvsModel.Store.device_propertys" Multiplicity="1" />
+    <End Role="device_property_options" Type="zvsModel.Store.device_property_options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_propertys">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_property_options">
+        <PropertyRef Name="device_property_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_property_values_0">
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="1" />
+    <End Role="device_property_values" Type="zvsModel.Store.device_property_values" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_property_values">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_property_values_1">
+    <End Role="device_propertys" Type="zvsModel.Store.device_propertys" Multiplicity="1" />
+    <End Role="device_property_values" Type="zvsModel.Store.device_property_values" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_propertys">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_property_values">
+        <PropertyRef Name="device_property_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_type_command_options_0">
+    <End Role="device_type_commands" Type="zvsModel.Store.device_type_commands" Multiplicity="1" />
+    <End Role="device_type_command_options" Type="zvsModel.Store.device_type_command_options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_type_commands">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_type_command_options">
+        <PropertyRef Name="device_type_command_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_type_command_que_0">
+    <End Role="device_type_commands" Type="zvsModel.Store.device_type_commands" Multiplicity="1" />
+    <End Role="device_type_command_que" Type="zvsModel.Store.device_type_command_que" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_type_commands">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_type_command_que">
+        <PropertyRef Name="device_type_command_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_type_command_que_1">
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="1" />
+    <End Role="device_type_command_que" Type="zvsModel.Store.device_type_command_que" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_type_command_que">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_type_commands_0">
+    <End Role="device_types" Type="zvsModel.Store.device_types" Multiplicity="1" />
+    <End Role="device_type_commands" Type="zvsModel.Store.device_type_commands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_type_commands">
+        <PropertyRef Name="device_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_types_0">
+    <End Role="plugins" Type="zvsModel.Store.plugins" Multiplicity="1" />
+    <End Role="device_types" Type="zvsModel.Store.device_types" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plugins">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_types">
+        <PropertyRef Name="plugin_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_value_triggers_0">
+    <End Role="scenes" Type="zvsModel.Store.scenes" Multiplicity="0..1" />
+    <End Role="device_value_triggers" Type="zvsModel.Store.device_value_triggers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="scenes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_value_triggers">
+        <PropertyRef Name="scene_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_value_triggers_1">
+    <End Role="device_values" Type="zvsModel.Store.device_values" Multiplicity="1" />
+    <End Role="device_value_triggers" Type="zvsModel.Store.device_value_triggers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_values">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_value_triggers">
+        <PropertyRef Name="device_value_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_values_0">
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="1" />
+    <End Role="device_values" Type="zvsModel.Store.device_values" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="device_values">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_devices_0">
+    <End Role="device_types" Type="zvsModel.Store.device_types" Multiplicity="1" />
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="device_types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="devices">
+        <PropertyRef Name="device_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_group_devices_0">
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="1" />
+    <End Role="group_devices" Type="zvsModel.Store.group_devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="group_devices">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_group_devices_1">
+    <End Role="groups" Type="zvsModel.Store.groups" Multiplicity="1" />
+    <End Role="group_devices" Type="zvsModel.Store.group_devices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="group_devices">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_plugin_setting_options_0">
+    <End Role="plugin_settings" Type="zvsModel.Store.plugin_settings" Multiplicity="1" />
+    <End Role="plugin_setting_options" Type="zvsModel.Store.plugin_setting_options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plugin_settings">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="plugin_setting_options">
+        <PropertyRef Name="plugin_settings_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_plugin_settings_0">
+    <End Role="plugins" Type="zvsModel.Store.plugins" Multiplicity="1" />
+    <End Role="plugin_settings" Type="zvsModel.Store.plugin_settings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plugins">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="plugin_settings">
+        <PropertyRef Name="plugin_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_scene_commands_0">
+    <End Role="devices" Type="zvsModel.Store.devices" Multiplicity="0..1" />
+    <End Role="scene_commands" Type="zvsModel.Store.scene_commands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scene_commands">
+        <PropertyRef Name="device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_scene_commands_1">
+    <End Role="scenes" Type="zvsModel.Store.scenes" Multiplicity="1" />
+    <End Role="scene_commands" Type="zvsModel.Store.scene_commands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="scenes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scene_commands">
+        <PropertyRef Name="scene_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_scene_property_option_0">
+    <End Role="scene_property" Type="zvsModel.Store.scene_property" Multiplicity="1" />
+    <End Role="scene_property_option" Type="zvsModel.Store.scene_property_option" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="scene_property">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scene_property_option">
+        <PropertyRef Name="scene_property_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_scene_property_value_0">
+    <End Role="scenes" Type="zvsModel.Store.scenes" Multiplicity="1" />
+    <End Role="scene_property_value" Type="zvsModel.Store.scene_property_value" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="scenes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scene_property_value">
+        <PropertyRef Name="scene_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_scene_property_value_1">
+    <End Role="scene_property" Type="zvsModel.Store.scene_property" Multiplicity="1" />
+    <End Role="scene_property_value" Type="zvsModel.Store.scene_property_value" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="scene_property">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scene_property_value">
+        <PropertyRef Name="scene_property_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

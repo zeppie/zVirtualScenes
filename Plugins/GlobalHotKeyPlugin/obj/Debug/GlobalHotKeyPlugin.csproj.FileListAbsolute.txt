@@ -1,0 +1,9 @@
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\bin\Debug\GlobalHotKeyPlugin.dll
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\bin\Debug\GlobalHotKeyPlugin.pdb
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\bin\Debug\zVirtualScenesAPI.dll
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\bin\Debug\zVirtualScenesCommon.dll
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\bin\Debug\zVirtualScenesAPI.pdb
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\bin\Debug\zVirtualScenesCommon.pdb
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\obj\Debug\GlobalHotKeyPlugin.dll
+I:\var\zvirtualscenes\Plugins\GlobalHotKeyPlugin\obj\Debug\GlobalHotKeyPlugin.pdb

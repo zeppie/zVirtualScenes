@@ -1,0 +1,6 @@
+I:\var\zvirtualscenes\output\zVirtualScenesCommon.dll.config
+I:\var\zvirtualscenes\output\zVirtualScenesCommon.dll
+I:\var\zvirtualscenes\output\zVirtualScenesCommon.pdb
+I:\var\zvirtualscenes\zVirtualScenesCommon\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\zVirtualScenesCommon\obj\Debug\zVirtualScenesCommon.dll
+I:\var\zvirtualscenes\zVirtualScenesCommon\obj\Debug\zVirtualScenesCommon.pdb

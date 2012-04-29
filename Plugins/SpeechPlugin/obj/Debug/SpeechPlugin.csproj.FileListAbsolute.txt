@@ -1,0 +1,5 @@
+I:\var\zvirtualscenes\output\plugins\SpeechPlugin.dll
+I:\var\zvirtualscenes\output\plugins\SpeechPlugin.pdb
+I:\var\zvirtualscenes\Plugins\SpeechPlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\SpeechPlugin\obj\Debug\SpeechPlugin.dll
+I:\var\zvirtualscenes\Plugins\SpeechPlugin\obj\Debug\SpeechPlugin.pdb

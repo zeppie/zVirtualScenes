@@ -1,0 +1,9 @@
+I:\var\zvirtualscenes\output\plugins\OpenZWaveDotNet.dll
+I:\var\zvirtualscenes\output\plugins\OpenZWavePlugin.dll
+I:\var\zvirtualscenes\output\plugins\OpenZWavePlugin.pdb
+I:\var\zvirtualscenes\Plugins\OpenZWavePlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\OpenZWavePlugin\obj\Debug\OpenZWavePlugin.Forms.ControllerCommandDlg.resources
+I:\var\zvirtualscenes\Plugins\OpenZWavePlugin\obj\Debug\GenerateResource.read.1.tlog
+I:\var\zvirtualscenes\Plugins\OpenZWavePlugin\obj\Debug\GenerateResource.write.1.tlog
+I:\var\zvirtualscenes\Plugins\OpenZWavePlugin\obj\Debug\OpenZWavePlugin.dll
+I:\var\zvirtualscenes\Plugins\OpenZWavePlugin\obj\Debug\OpenZWavePlugin.pdb

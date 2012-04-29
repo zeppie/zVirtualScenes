@@ -1,0 +1,10 @@
+I:\var\zvirtualscenes\output\zVirtualScenesService.exe.config
+I:\var\zvirtualscenes\output\zVirtualScenesService.exe
+I:\var\zvirtualscenes\output\zVirtualScenesService.pdb
+I:\var\zvirtualscenes\zVirtualScenesService\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\zVirtualScenesService\obj\x86\Debug\zVirtualScenesService.CoreService.resources
+I:\var\zvirtualscenes\zVirtualScenesService\obj\x86\Debug\zVirtualScenesService.ProjectInstaller.resources
+I:\var\zvirtualscenes\zVirtualScenesService\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\var\zvirtualscenes\zVirtualScenesService\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\var\zvirtualscenes\zVirtualScenesService\obj\x86\Debug\zVirtualScenesService.exe
+I:\var\zvirtualscenes\zVirtualScenesService\obj\x86\Debug\zVirtualScenesService.pdb

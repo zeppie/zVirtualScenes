@@ -1,0 +1,8 @@
+I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\obj\Debug\JabberPlugin.dll
+I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\obj\Debug\JabberPlugin.pdb
+I:\var\zvirtualscenes\Plugins\EventGhostPlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\output\plugins\EventGhostPlugin.dll
+I:\var\zvirtualscenes\output\plugins\EventGhostPlugin.pdb
+I:\var\zvirtualscenes\Plugins\EventGhostPlugin\obj\Debug\EventGhostPlugin.dll
+I:\var\zvirtualscenes\Plugins\EventGhostPlugin\obj\Debug\EventGhostPlugin.pdb

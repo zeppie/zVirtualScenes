@@ -1,0 +1,7 @@
+I:\var\zvirtualscenes\output\plugins\dnssd.dll
+I:\var\zvirtualscenes\output\plugins\ZeroconfService.dll
+I:\var\zvirtualscenes\output\plugins\LightSwitchPlugin.dll
+I:\var\zvirtualscenes\output\plugins\LightSwitchPlugin.pdb
+I:\var\zvirtualscenes\Plugins\LightSwitchPlugin\obj\Debug\ResolveAssemblyReference.cache
+I:\var\zvirtualscenes\Plugins\LightSwitchPlugin\obj\Debug\LightSwitchPlugin.dll
+I:\var\zvirtualscenes\Plugins\LightSwitchPlugin\obj\Debug\LightSwitchPlugin.pdb
