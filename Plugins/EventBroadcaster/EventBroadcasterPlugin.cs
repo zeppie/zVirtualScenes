@@ -72,34 +72,34 @@ namespace EventBroadcaster
 
         protected void BindEvents()
         {
-            builtin_command_que.BuiltinCommandRunCompleteEvent += new builtin_command_que.BuiltinCommandRunCompleteEventHandler(builtin_command_que_BuiltinCommandRunCompleteEvent);
-            device_type_command_que.DeviceTypeCommandRunCompleteEvent += new device_type_command_que.DeviceTypeCommandRunCompleteEventHandler(device_type_command_que_DeviceTypeCommandRunCompleteEvent);
-            device_command_que.DeviceCommandRunCompleteEvent += new device_command_que.DeviceCommandRunCompleteEventHandler(device_command_que_DeviceCommandRunCompleteEvent);
-            zvsEntityControl.SceneRunStartedEvent += new zvsEntityControl.SceneRunStartedEventHandler(zvsEntityControl_SceneRunStartedEvent);
-            zvsEntityControl.SceneRunCompleteEvent += new zvsEntityControl.SceneRunCompleteEventHandler(zvsEntityControl_SceneRunCompleteEvent);
-            device_values.DeviceValueDataChangedEvent += new device_values.ValueDataChangedEventHandler(device_values_DeviceValueDataChangedEvent);
-            device_values.DeviceValueAddedEvent += new device_values.DeviceValueAddedEventHandler(device_values_DeviceValueAddedEvent);
-            zvsEntityControl.DeviceModified += new zvsEntityControl.DeviceModifiedEventHandler(zvsEntityControl_DeviceModified);
-            device.Added += new device.DeviceAddedEventHandler(device_Added);
-            zvsEntityControl.ScheduledTaskModified += new zvsEntityControl.ScheduledTaskModifiedEventHandler(zvsEntityControl_ScheduledTaskModified);
-            zvsEntityControl.TriggerModified += new zvsEntityControl.TriggerModifiedEventHandler(zvsEntityControl_TriggerModified);
-            zvsEntityControl.SceneModified += new zvsEntityControl.SceneModifiedEventHandler(zvsEntityControl_SceneModified);
+            builtin_command_que.BuiltinCommandRunCompleteEvent += builtin_command_que_BuiltinCommandRunCompleteEvent;
+            device_type_command_que.DeviceTypeCommandRunCompleteEvent += device_type_command_que_DeviceTypeCommandRunCompleteEvent;
+            device_command_que.DeviceCommandRunCompleteEvent += device_command_que_DeviceCommandRunCompleteEvent;
+            zvsEntityControl.SceneRunStartedEvent += zvsEntityControl_SceneRunStartedEvent;
+            zvsEntityControl.SceneRunCompleteEvent += zvsEntityControl_SceneRunCompleteEvent;
+            device_values.DeviceValueDataChangedEvent += device_values_DeviceValueDataChangedEvent;
+            device_values.DeviceValueAddedEvent += device_values_DeviceValueAddedEvent;
+            zvsEntityControl.DeviceModified += zvsEntityControl_DeviceModified;
+            device.Added += device_Added;
+            zvsEntityControl.ScheduledTaskModified += zvsEntityControl_ScheduledTaskModified;
+            zvsEntityControl.TriggerModified += zvsEntityControl_TriggerModified;
+            zvsEntityControl.SceneModified += zvsEntityControl_SceneModified;
         }
 
         protected void UnbindEvents()
         {
-            builtin_command_que.BuiltinCommandRunCompleteEvent -= new builtin_command_que.BuiltinCommandRunCompleteEventHandler(builtin_command_que_BuiltinCommandRunCompleteEvent);
-            device_type_command_que.DeviceTypeCommandRunCompleteEvent -= new device_type_command_que.DeviceTypeCommandRunCompleteEventHandler(device_type_command_que_DeviceTypeCommandRunCompleteEvent);
-            device_command_que.DeviceCommandRunCompleteEvent -= new device_command_que.DeviceCommandRunCompleteEventHandler(device_command_que_DeviceCommandRunCompleteEvent);
-            zvsEntityControl.SceneRunStartedEvent -= new zvsEntityControl.SceneRunStartedEventHandler(zvsEntityControl_SceneRunStartedEvent);
-            zvsEntityControl.SceneRunCompleteEvent -= new zvsEntityControl.SceneRunCompleteEventHandler(zvsEntityControl_SceneRunCompleteEvent);
-            device_values.DeviceValueDataChangedEvent -= new device_values.ValueDataChangedEventHandler(device_values_DeviceValueDataChangedEvent);
-            device_values.DeviceValueAddedEvent -= new device_values.DeviceValueAddedEventHandler(device_values_DeviceValueAddedEvent);
-            zvsEntityControl.DeviceModified -= new zvsEntityControl.DeviceModifiedEventHandler(zvsEntityControl_DeviceModified);
-            device.Added -= new device.DeviceAddedEventHandler(device_Added);
-            zvsEntityControl.ScheduledTaskModified -= new zvsEntityControl.ScheduledTaskModifiedEventHandler(zvsEntityControl_ScheduledTaskModified);
-            zvsEntityControl.TriggerModified -= new zvsEntityControl.TriggerModifiedEventHandler(zvsEntityControl_TriggerModified);
-            zvsEntityControl.SceneModified -= new zvsEntityControl.SceneModifiedEventHandler(zvsEntityControl_SceneModified);
+            builtin_command_que.BuiltinCommandRunCompleteEvent -= builtin_command_que_BuiltinCommandRunCompleteEvent;
+            device_type_command_que.DeviceTypeCommandRunCompleteEvent -= device_type_command_que_DeviceTypeCommandRunCompleteEvent;
+            device_command_que.DeviceCommandRunCompleteEvent -= device_command_que_DeviceCommandRunCompleteEvent;
+            zvsEntityControl.SceneRunStartedEvent -= zvsEntityControl_SceneRunStartedEvent;
+            zvsEntityControl.SceneRunCompleteEvent -= zvsEntityControl_SceneRunCompleteEvent;
+            device_values.DeviceValueDataChangedEvent -= device_values_DeviceValueDataChangedEvent;
+            device_values.DeviceValueAddedEvent -= device_values_DeviceValueAddedEvent;
+            zvsEntityControl.DeviceModified -= zvsEntityControl_DeviceModified;
+            device.Added -= device_Added;
+            zvsEntityControl.ScheduledTaskModified -= zvsEntityControl_ScheduledTaskModified;
+            zvsEntityControl.TriggerModified -= zvsEntityControl_TriggerModified;
+            zvsEntityControl.SceneModified -= zvsEntityControl_SceneModified;
         }
 
         private void BroadcastEvent(params string[] eventSegments)

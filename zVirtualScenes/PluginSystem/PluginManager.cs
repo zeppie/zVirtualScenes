@@ -110,7 +110,7 @@ namespace zVirtualScenesApplication.PluginSystem
             {
                 device_type_command_que cmd = context.device_type_command_que.FirstOrDefault(c => c.id == device_type_command_que_id);
 
-                if (cmd != null && cmd.device != null)
+                if (cmd != null && cmd.device != null && cmd.device.device_types.plugin != null)
                 {
                     Logger.WriteToLog(Urgency.INFO,"[Processing Device Type CMD] API:" + cmd.device.device_types.plugin.name +
                                                             ", CMD_NAME:" + cmd.device_type_commands.friendly_name +

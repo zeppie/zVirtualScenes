@@ -239,5 +239,10 @@ namespace OpenZWavePlugin.Forms
             // Close the dialog
             Close();
         }
+
+        private void ControllerCommandDlg_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

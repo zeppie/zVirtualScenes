@@ -214,8 +214,6 @@ namespace OpenZWavePlugin
                 default_value = true.ToString(),
                 value_data_type = (int)Data_Types.BOOL
             });
-
-            
                         
             //TODO: Make a new DeviceAPIProperty that is API specific for types of settings that applies OpenZWave Devices           
 

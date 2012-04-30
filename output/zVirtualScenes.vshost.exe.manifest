@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resources\audio-mixing-desk.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="zVirtualScenes" version="2.0.4502.26188" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="zVirtualScenes" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
     <commandLine file="zVirtualScenes.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -80,13 +80,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zVirtualScenes.exe" size="5430784">
-      <assemblyIdentity name="zVirtualScenes" version="2.0.4502.26188" language="neutral" processorArchitecture="x86" />
+      <assemblyIdentity name="zVirtualScenes" version="2.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pjyKhRSS0HWl/WXw1epW+ArAlHA=</dsig:DigestValue>
+        <dsig:DigestValue>+fo6EyiOzxMjTEYWMexYMiHXYzE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZgdZonca/pperTeQsx9D2pQLg9Q=</dsig:DigestValue>
+        <dsig:DigestValue>laxUHH7aLQth7eBpfGzVSPot9Jg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>SrnhjaX0ErMXh4KBIBWNVZ/TEpA=</dsig:DigestValue>
+        <dsig:DigestValue>BeC45V3rXWKrcbqz0uCqv4vyWaY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

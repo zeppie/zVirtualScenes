@@ -1,1 +1,0 @@
-I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\docs\examples\UsbUirt_rev1\UsbUirt\TestApp\obj\Debug\ResolveAssemblyReference.cache

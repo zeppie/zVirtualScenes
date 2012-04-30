@@ -1459,92 +1459,95 @@ namespace zVirtualScenesApplication
 
         private void timer_TaskRunner_Tick(object sender, EventArgs e)
         {
-            foreach (scheduled_tasks task in task_list)
+            if (task_list != null)
             {
-                if (task.Enabled)
+                foreach (scheduled_tasks task in task_list)
                 {
-                    if (task.Frequency.HasValue)
+                    if (task.Enabled)
                     {
-                        switch ((scheduled_tasks.frequencys)task.Frequency)
+                        if (task.Frequency.HasValue)
                         {
-                            case scheduled_tasks.frequencys.Seconds:
-                                {
-                                    if (task.StartTime.HasValue)
+                            switch ((scheduled_tasks.frequencys)task.Frequency)
+                            {
+                                case scheduled_tasks.frequencys.Seconds:
                                     {
-                                        int sec = (int)(DateTime.Now - task.StartTime.Value).TotalSeconds;
-                                        if (sec % task.RecurSeconds == 0)                                        
-                                            task.Run();                                        
+                                        if (task.StartTime.HasValue)
+                                        {
+                                            int sec = (int)(DateTime.Now - task.StartTime.Value).TotalSeconds;
+                                            if (sec % task.RecurSeconds == 0)
+                                                task.Run();
+                                        }
+                                        break;
                                     }
-                                    break;
-                                }
-                            case scheduled_tasks.frequencys.Daily:
-                                {
-                                    if (task.StartTime.HasValue)
+                                case scheduled_tasks.frequencys.Daily:
                                     {
-                                        //Logger.WriteToLog(Urgency.INFO,"totaldays:" + (DateTime.Now.Date - task.StartTime.Value.Date).TotalDays);
-                                        if (task.RecurDays > 0 && ((DateTime.Now.Date - task.StartTime.Value.Date).TotalDays % task.RecurDays == 0))
+                                        if (task.StartTime.HasValue)
+                                        {
+                                            //Logger.WriteToLog(Urgency.INFO,"totaldays:" + (DateTime.Now.Date - task.StartTime.Value.Date).TotalDays);
+                                            if (task.RecurDays > 0 && ((DateTime.Now.Date - task.StartTime.Value.Date).TotalDays % task.RecurDays == 0))
+                                            {
+                                                TimeSpan TimeNowToTheSeconds = DateTime.Now.TimeOfDay;
+                                                TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds); //remove milli seconds
+
+                                                //Logger.WriteToLog(Urgency.INFO,string.Format("taskTofD: {0}, nowTofD: {1}", task.StartTime.Value.TimeOfDay, TimeNowToTheSeconds));                                            
+                                                if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))
+                                                    task.Run();
+                                            }
+                                        }
+                                        break;
+                                    }
+                                case scheduled_tasks.frequencys.Weekly:
+                                    {
+                                        if (task.StartTime.HasValue)
+                                        {
+                                            if (task.RecurWeeks > 0 && (((Int32)(DateTime.Now.Date - task.StartTime.Value.Date).TotalDays / 7) % task.RecurWeeks == 0))  //IF RUN THIS WEEK
+                                            {
+                                                if (ShouldRunToday(task))  //IF RUN THIS DAY 
+                                                {
+                                                    TimeSpan TimeNowToTheSeconds = DateTime.Now.TimeOfDay;
+                                                    TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds);
+
+                                                    if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))
+                                                        task.Run();
+                                                }
+                                            }
+                                        }
+                                        break;
+                                    }
+                                case scheduled_tasks.frequencys.Monthly:
+                                    {
+                                        if (task.StartTime.HasValue)
+                                        {
+                                            int monthsapart = ((DateTime.Now.Year - task.StartTime.Value.Year) * 12) + DateTime.Now.Month - task.StartTime.Value.Month;
+                                            //Logger.WriteToLog(Urgency.INFO,string.Format("Months Apart: {0}", monthsapart));
+                                            if (task.RecurMonth > 0 && monthsapart > -1 && monthsapart % task.RecurMonth == 0)  //IF RUN THIS Month
+                                            {
+                                                if (ShouldRunThisDayOfMonth(task))  //IF RUN THIS DAY 
+                                                {
+                                                    TimeSpan TimeNowToTheSeconds = DateTime.Now.TimeOfDay;
+                                                    TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds);
+
+                                                    if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))
+                                                        task.Run();
+                                                }
+                                            }
+                                        }
+
+                                        break;
+                                    }
+                                case scheduled_tasks.frequencys.Once:
+                                    {
+                                        if (task.StartTime.HasValue)
                                         {
                                             TimeSpan TimeNowToTheSeconds = DateTime.Now.TimeOfDay;
-                                            TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds); //remove milli seconds
-                                            
-                                            //Logger.WriteToLog(Urgency.INFO,string.Format("taskTofD: {0}, nowTofD: {1}", task.StartTime.Value.TimeOfDay, TimeNowToTheSeconds));                                            
-                                            if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))                                            
-                                                task.Run();                                            
-                                        }
-                                    }
-                                    break;
-                                }
-                            case scheduled_tasks.frequencys.Weekly:
-                                {
-                                    if (task.StartTime.HasValue)
-                                    {
-                                        if (task.RecurWeeks > 0 && (((Int32)(DateTime.Now.Date - task.StartTime.Value.Date).TotalDays / 7) % task.RecurWeeks == 0))  //IF RUN THIS WEEK
-                                        {
-                                            if (ShouldRunToday(task))  //IF RUN THIS DAY 
-                                            {
-                                                TimeSpan TimeNowToTheSeconds = DateTime.Now.TimeOfDay;
-                                                TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds);
-                                          
-                                                if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))
-                                                    task.Run();
-                                            }
-                                        }
-                                    }
-                                    break;
-                                }
-                            case scheduled_tasks.frequencys.Monthly:
-                                {
-                                    if (task.StartTime.HasValue)
-                                    {
-                                        int monthsapart = ((DateTime.Now.Year - task.StartTime.Value.Year) * 12) + DateTime.Now.Month - task.StartTime.Value.Month;
-                                        //Logger.WriteToLog(Urgency.INFO,string.Format("Months Apart: {0}", monthsapart));
-                                        if (task.RecurMonth > 0 && monthsapart > -1 && monthsapart % task.RecurMonth == 0)  //IF RUN THIS Month
-                                        {
-                                            if (ShouldRunThisDayOfMonth(task))  //IF RUN THIS DAY 
-                                            {
-                                                TimeSpan TimeNowToTheSeconds = DateTime.Now.TimeOfDay;
-                                                TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds);
+                                            TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds);
 
-                                                if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))
-                                                    task.Run();
-                                            }
+                                            if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))
+                                                task.Run();
                                         }
+                                        break;
                                     }
-
-                                    break;
-                                }
-                            case scheduled_tasks.frequencys.Once:
-                                {
-                                    if (task.StartTime.HasValue)
-                                    {
-                                        TimeSpan TimeNowToTheSeconds = DateTime.Now.TimeOfDay;
-                                        TimeNowToTheSeconds = new TimeSpan(TimeNowToTheSeconds.Hours, TimeNowToTheSeconds.Minutes, TimeNowToTheSeconds.Seconds);
-                                           
-                                        if (TimeNowToTheSeconds.Equals(task.StartTime.Value.TimeOfDay))
-                                            task.Run();
-                                    }
-                                    break;
-                                }
+                            }
                         }
                     }
                 }

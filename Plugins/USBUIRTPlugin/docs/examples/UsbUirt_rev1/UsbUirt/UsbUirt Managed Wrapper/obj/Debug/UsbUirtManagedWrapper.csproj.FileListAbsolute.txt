@@ -1,6 +1,0 @@
-I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\docs\examples\UsbUirt_rev1\UsbUirt\UsbUirt Managed Wrapper\obj\Debug\ResolveAssemblyReference.cache
-I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\docs\examples\UsbUirt_rev1\UsbUirt\UsbUirt Managed Wrapper\obj\Debug\UsbUirtManagedWrapper.pdb
-I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\docs\examples\UsbUirt_rev1\UsbUirt\UsbUirt Managed Wrapper\bin\Debug\UsbUirtManagedWrapper.dll
-I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\docs\examples\UsbUirt_rev1\UsbUirt\UsbUirt Managed Wrapper\bin\Debug\UsbUirtManagedWrapper.pdb
-I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\docs\examples\UsbUirt_rev1\UsbUirt\UsbUirt Managed Wrapper\bin\Debug\UsbUirtManagedWrapper.xml
-I:\var\zvirtualscenes\Plugins\USBUIRTPlugin\docs\examples\UsbUirt_rev1\UsbUirt\UsbUirt Managed Wrapper\obj\Debug\UsbUirtManagedWrapper.dll
