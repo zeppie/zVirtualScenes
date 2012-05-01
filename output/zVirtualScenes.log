@@ -55,3 +55,35 @@
 2012-04-30-12:26:58:381|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
 2012-04-30-12:26:58:448|  INFO|ScheduledTaskList   |------>>>>>>> Syned dataListTasks <<<<<<<<<<<---------------------
 2012-04-30-12:27:01:359|  INFO|PLUGIN MANAGER      |[Processing Device Type CMD] API:USBUIRT, CMD_NAME:Add device, ARG:
+2012-05-01-07:32:09:780|  INFO|Load                |STARTED
+2012-05-01-07:32:11:783|  INFO|USB-UIRT Plugin     |USB-UIRT Plugin plugin started.
+2012-05-01-07:32:11:889|  INFO|ListViewDevices     |------>>>>>>> UpdatedataListViewDevices <<<<<<<<<<<---------------------
+2012-05-01-07:32:11:958|  INFO|ListTriggers        |------>>>>>>> SyncdataListTriggers <<<<<<<<<<<---------------------
+2012-05-01-07:32:11:986|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:32:12:053|  INFO|ScheduledTaskList   |------>>>>>>> Syned dataListTasks <<<<<<<<<<<---------------------
+2012-05-01-07:33:23:133|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:33:31:923|  INFO|MAIN                |Failed to start scene 'New Scene' because it has no commands!
+2012-05-01-07:33:43:429|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:33:44:944|  INFO|EVENT               |Scene 'New Scene' started.
+2012-05-01-07:33:45:035|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:33:45:042|  INFO|MAIN                |Scene 'New Scene' started.
+2012-05-01-07:33:45:065|  INFO|MainForm            |[PROCESSING BUILTIN CMD] CMD_NAME:Repoll all Devices, ARG:
+2012-05-01-07:33:45:108|  INFO|EVENT               |Scene 'New Scene' has completed with 0 errors.
+2012-05-01-07:33:45:182|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:34:15:763|  INFO|EVENT               |Scene 'New Scene' started.
+2012-05-01-07:34:15:845|  INFO|MainForm            |[PROCESSING BUILTIN CMD] CMD_NAME:Repoll all Devices, ARG:
+2012-05-01-07:34:15:850|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:34:15:876|  INFO|MAIN                |Scene 'New Scene' started.
+2012-05-01-07:34:15:938|  INFO|EVENT               |Scene 'New Scene' has completed with 0 errors.
+2012-05-01-07:34:16:011|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:36:23:840|  INFO|EVENT               |Scene 'New Scene' started.
+2012-05-01-07:36:23:884|  INFO|MainForm            |[PROCESSING BUILTIN CMD] CMD_NAME:Repoll all Devices, ARG:
+2012-05-01-07:36:23:931|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:36:23:955|  INFO|MAIN                |Scene 'New Scene' started.
+2012-05-01-07:36:24:022|  INFO|EVENT               |Scene 'New Scene' has completed with 0 errors.
+2012-05-01-07:36:24:093|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:37:06:461|  INFO|EVENT               |Scene 'New Scene' started.
+2012-05-01-07:37:06:503|  INFO|MainForm            |[PROCESSING BUILTIN CMD] CMD_NAME:Repoll all Devices, ARG:
+2012-05-01-07:37:06:551|  INFO|ListViewScenes      |------>>>>>>> SyncdataListViewScenes <<<<<<<<<<<---------------------
+2012-05-01-07:37:06:574|  INFO|MAIN                |Scene 'New Scene' started.
+2012-05-01-07:37:06:634|  INFO|EVENT               |Scene 'New Scene' has completed with 0 errors.

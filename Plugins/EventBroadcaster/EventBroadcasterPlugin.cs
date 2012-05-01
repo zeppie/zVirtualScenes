@@ -129,7 +129,10 @@ namespace EventBroadcaster
 
         void zvsEntityControl_SceneModified(object sender, long? SceneID)
         {
-            this.BroadcastEvent("SceneModified");
+            if (SceneID != null)
+            {
+                this.BroadcastEvent("SceneModified", SceneID.ToString());
+            }
         }
 
         void zvsEntityControl_TriggerModified(object sender, string PropertyModified)
@@ -169,22 +172,22 @@ namespace EventBroadcaster
 
         void zvsEntityControl_SceneRunStartedEvent(scene s, string result)
         {
-            this.BroadcastEvent("SceneRunStarted", s.ToString());
+            this.BroadcastEvent("SceneRunStarted", s.id.ToString(), result);
         }
 
         void device_command_que_DeviceCommandRunCompleteEvent(device_command_que cmd, bool withErrors, string txtError)
         {
-            this.BroadcastEvent("DeviceCommandRunComplete", cmd.ToString());
+            this.BroadcastEvent("DeviceCommandRunComplete", cmd.id.ToString());
         }
 
         void device_type_command_que_DeviceTypeCommandRunCompleteEvent(device_type_command_que cmd, bool withErrors, string txtError)
         {
-            this.BroadcastEvent("DeviceTypeCommandRunComplete", cmd.ToString());
+            this.BroadcastEvent("DeviceTypeCommandRunComplete", cmd.id.ToString());
         }
 
         void builtin_command_que_BuiltinCommandRunCompleteEvent(builtin_command_que cmd, bool withErrors, string txtError)
         {
-            this.BroadcastEvent("BuiltinCommandRunComplete", cmd.ToString());
+            this.BroadcastEvent("BuiltinCommandRunComplete", cmd.id.ToString());
         }
 
         public override bool ProcessDeviceCommand(device_command_que cmd)
