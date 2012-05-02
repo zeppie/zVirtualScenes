@@ -38,18 +38,9 @@ namespace EventBroadcaster
             {
                 name = "DELIMITER",
                 friendly_name = "Delimiter",
-                value = "&&",
+                value = ".",
                 value_data_type = (int)Data_Types.STRING,
                 description = "The delimiter between the event segments."
-            });
-
-            DefineOrUpdateSetting(new plugin_settings
-            {
-                name = "PREFIX",
-                friendly_name = "Prefix",
-                value = "",
-                value_data_type = (int)Data_Types.STRING,
-                description = "A prefix segment for the events."
             });
         }
 
@@ -72,46 +63,45 @@ namespace EventBroadcaster
 
         protected void BindEvents()
         {
-            builtin_command_que.BuiltinCommandRunCompleteEvent += builtin_command_que_BuiltinCommandRunCompleteEvent;
-            device_type_command_que.DeviceTypeCommandRunCompleteEvent += device_type_command_que_DeviceTypeCommandRunCompleteEvent;
-            device_command_que.DeviceCommandRunCompleteEvent += device_command_que_DeviceCommandRunCompleteEvent;
             zvsEntityControl.SceneRunStartedEvent += zvsEntityControl_SceneRunStartedEvent;
             zvsEntityControl.SceneRunCompleteEvent += zvsEntityControl_SceneRunCompleteEvent;
-            device_values.DeviceValueDataChangedEvent += device_values_DeviceValueDataChangedEvent;
+            builtin_command_que.BuiltinCommandRunCompleteEvent += builtin_command_que_BuiltinCommandRunCompleteEvent;
+            device_type_command_que.DeviceTypeCommandRunCompleteEvent += device_type_command_que_DeviceTypeCommandRunCompleteEvent;
+            device_values.DeviceValueDataChangedEvent -= device_values_DeviceValueDataChangedEvent;
             device_values.DeviceValueAddedEvent += device_values_DeviceValueAddedEvent;
-            zvsEntityControl.DeviceModified += zvsEntityControl_DeviceModified;
-            device.Added += device_Added;
-            zvsEntityControl.ScheduledTaskModified += zvsEntityControl_ScheduledTaskModified;
-            zvsEntityControl.TriggerModified += zvsEntityControl_TriggerModified;
-            zvsEntityControl.SceneModified += zvsEntityControl_SceneModified;
+
+            //device_command_que.DeviceCommandRunCompleteEvent += device_command_que_DeviceCommandRunCompleteEvent;
+            //device_values.DeviceValueDataChangedEvent += device_values_DeviceValueDataChangedEvent;
+            //zvsEntityControl.DeviceModified += zvsEntityControl_DeviceModified;
+            //device.Added += device_Added;
+            //zvsEntityControl.ScheduledTaskModified += zvsEntityControl_ScheduledTaskModified;
+            //zvsEntityControl.TriggerModified += zvsEntityControl_TriggerModified;
+            //zvsEntityControl.SceneModified += zvsEntityControl_SceneModified;
         }
 
         protected void UnbindEvents()
         {
-            builtin_command_que.BuiltinCommandRunCompleteEvent -= builtin_command_que_BuiltinCommandRunCompleteEvent;
-            device_type_command_que.DeviceTypeCommandRunCompleteEvent -= device_type_command_que_DeviceTypeCommandRunCompleteEvent;
-            device_command_que.DeviceCommandRunCompleteEvent -= device_command_que_DeviceCommandRunCompleteEvent;
             zvsEntityControl.SceneRunStartedEvent -= zvsEntityControl_SceneRunStartedEvent;
             zvsEntityControl.SceneRunCompleteEvent -= zvsEntityControl_SceneRunCompleteEvent;
+            builtin_command_que.BuiltinCommandRunCompleteEvent -= builtin_command_que_BuiltinCommandRunCompleteEvent;
+            device_type_command_que.DeviceTypeCommandRunCompleteEvent -= device_type_command_que_DeviceTypeCommandRunCompleteEvent;
             device_values.DeviceValueDataChangedEvent -= device_values_DeviceValueDataChangedEvent;
             device_values.DeviceValueAddedEvent -= device_values_DeviceValueAddedEvent;
-            zvsEntityControl.DeviceModified -= zvsEntityControl_DeviceModified;
-            device.Added -= device_Added;
-            zvsEntityControl.ScheduledTaskModified -= zvsEntityControl_ScheduledTaskModified;
-            zvsEntityControl.TriggerModified -= zvsEntityControl_TriggerModified;
-            zvsEntityControl.SceneModified -= zvsEntityControl_SceneModified;
+
+            //device_command_que.DeviceCommandRunCompleteEvent -= device_command_que_DeviceCommandRunCompleteEvent;
+            //device_values.DeviceValueAddedEvent -= device_values_DeviceValueAddedEvent;
+            //zvsEntityControl.DeviceModified -= zvsEntityControl_DeviceModified;
+            //device.Added -= device_Added;
+            //zvsEntityControl.ScheduledTaskModified -= zvsEntityControl_ScheduledTaskModified;
+            //zvsEntityControl.TriggerModified -= zvsEntityControl_TriggerModified;
+            //zvsEntityControl.SceneModified -= zvsEntityControl_SceneModified;
         }
 
         private void BroadcastEvent(params string[] eventSegments)
         {
-            var prefix = GetSettingValue("PREFIX");
             var delimiter = GetSettingValue("DELIMITER");
-            string eventName = String.Join(delimiter, eventSegments);
 
-            if (prefix != String.Empty)
-            {
-                eventName = prefix + delimiter + eventName;
-            }
+            string eventName = String.Join(delimiter, eventSegments);
 
             byte[] data = Encoding.ASCII.GetBytes(eventName);
             this.socket.SendTo(data, this.ipEndPoint);
@@ -172,7 +162,7 @@ namespace EventBroadcaster
 
         void zvsEntityControl_SceneRunStartedEvent(scene s, string result)
         {
-            this.BroadcastEvent("SceneRunStarted", s.id.ToString(), result);
+            this.BroadcastEvent("SceneRunStarted", s.id.ToString());
         }
 
         void device_command_que_DeviceCommandRunCompleteEvent(device_command_que cmd, bool withErrors, string txtError)
